@@ -1,5 +1,9 @@
 New js file for tutrial.
-
+python manage.py shell -c "
+from pos.models import Table, Category, MenuItem
+print(Table.objects.count(), Category.objects.count(), MenuItem.objects.count())
+"
+python manage.py shell -c "exec(open('seed_demo.py').read())"
 
 Vostro 3510@DESKTOP-D1VN9TT MINGW64 ~/Desktop/Fkre/backend (main)
 $ python manage.py shell < seed_demo.py
